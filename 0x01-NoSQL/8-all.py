@@ -3,8 +3,8 @@
 list all documents of a mongodb
 database collection
 """
-
 from pymongo import MongoClient
+
 
 def list_all(mongo_collection):
     """
