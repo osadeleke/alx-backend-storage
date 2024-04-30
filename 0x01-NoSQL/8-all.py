@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
+"""
+list all documents of a mongodb
+database collection
+"""
 
 from pymongo import MongoClient
 
-client = MongoClient()
-
-def list_all():
-  db = client['my_db']
-
-  collection = db["school"]
-
-  collectionlist = []
-
-  for doc in collection.find():
-      collectionlist.append(doc)
-
-  return collectionlist
+def list_all(mongo_collection):
+    """
+    list all documents of a mongodb
+    database collection
+    """
+    documents = mongo_collection.find()
+    return list(documents)
