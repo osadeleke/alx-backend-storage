@@ -27,7 +27,7 @@ if __name__ == "__main__":
             ]
 
     top_counts = list(collection.aggregate(pipeline))
-    print("IPS:")
+    print("IPs:")
 
     for item in top_counts:
         print(f"\t{item['_id']}: {item['count']}")
